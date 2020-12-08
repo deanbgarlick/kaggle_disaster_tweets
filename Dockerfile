@@ -2,12 +2,11 @@
 # This is a Python 2 image that uses the nginx, gunicorn, flask stack
 # for serving inferences in a stable way.
 
-FROM ubuntu:16.04
+FROM python:3.6.12-slim-buster
 
 
 RUN apt-get -y update && apt-get install -y --no-install-recommends \
          wget \
-         python3 \
          nginx \
          ca-certificates \
     && rm -rf /var/lib/apt/lists/*
@@ -17,8 +16,8 @@ WORKDIR /opt/program
 COPY requirements.txt .
 
 # Here we get all python packages.
-RUN wget https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py && \
-    pip install -r requirements.txt
+#RUN wget https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py && \
+RUN pip install -r requirements.txt
 
 # Set some environment variables. PYTHONUNBUFFERED keeps Python from buffering our standard
 # output stream, which means that logs can be delivered to the user quickly. PYTHONDONTWRITEBYTECODE
@@ -36,3 +35,5 @@ RUN chmod +x train
 RUN chmod +x serve
 
 EXPOSE 8888
+
+CMD ["/bin/bash"]

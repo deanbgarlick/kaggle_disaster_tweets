@@ -1,0 +1,14 @@
+Collecting sklearn
+  Downloading sklearn-0.0.tar.gz (1.1 kB)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.6/site-packages (from sklearn) (0.20.2)
+Requirement already satisfied: scipy>=0.13.3 in /usr/local/lib/python3.6/site-packages (from scikit-learn->sklearn) (1.2.1)
+Requirement already satisfied: numpy>=1.8.2 in /usr/local/lib/python3.6/site-packages (from scikit-learn->sklearn) (1.16.2)
+Requirement already satisfied: numpy>=1.8.2 in /usr/local/lib/python3.6/site-packages (from scikit-learn->sklearn) (1.16.2)
+Building wheels for collected packages: sklearn
+  Building wheel for sklearn (setup.py): started
+  Building wheel for sklearn (setup.py): finished with status 'done'
+  Created wheel for sklearn: filename=sklearn-0.0-py2.py3-none-any.whl size=1315 sha256=7f7b83c389319081a8516687060d049d1406c10add135f06457ea5de03974e44
+  Stored in directory: /root/.cache/pip/wheels/23/9d/42/5ec745cbbb17517000a53cecc49d6a865450d1f5cb16dc8a9c
+Successfully built sklearn
+Installing collected packages: sklearn
+Successfully installed sklearn-0.0
